@@ -49,6 +49,7 @@ int		ft_isdigit(char c);
 int		ft_strlen(const char *s);
 int 	get_median(int *arr, int size);
 int		ft_strcmp(const char *s1, const char *s2);
+int 	*bubble_sort(int *arr, int size);
 
 long	ft_atoi(const char *str);
 
@@ -61,10 +62,12 @@ void 	check_duplicate(char **args, int ac);
 void 	check_isdigit(char **args);
 void	print_error(char *error);
 void 	check_args(char **args, int ac);
-void 	free_args(char *joined, char **args, int flag);
+void 	free_args(char *joined, char **args);
+
+//Stack
+int 	is_sorted(t_stack *stack);
 
 void 	free_stack(t_stack *stack);
 void 	init_stack(t_stack *stack, char **args, int ac);
-void 	sort_stack(t_stack *stack);
 
 #endif

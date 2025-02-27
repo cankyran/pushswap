@@ -13,13 +13,13 @@
 #include    "push_swap.h"
 #include    <unistd.h>
 
-void free_args(char *joined, char **args, int flag)
+void free_args(char *joined, char **args)
 {
     int i;
 
-    i = 0;
-    if (flag == 1)
+    if (args)
     {
+        i = 0;
         while (args[i])
         {
             free(args[i]);

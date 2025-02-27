@@ -15,14 +15,14 @@ void check_isdigit(char **args)
             {
                 if (!args[i][j + 1] || args[i][j + 1] == '0')
                 {
-                    free_args(NULL, args, 1);
+                    free_args(NULL, args);
                     print_error("Error\n");
                 }
                 j++;
             }
             if (!ft_isdigit(args[i][j]))
             {
-                free_args(NULL, args, 1);
+                free_args(NULL, args);
                 print_error("Error\n");
             }
             j++;
@@ -44,7 +44,7 @@ void check_duplicate(char **args, int ac)
         {
             if (ft_strcmp(args[i], args[j]) == 0)
             {
-                free_args(NULL, args, 1);
+                free_args(NULL, args);
                 print_error("Error\n");
             }
             j++;
@@ -64,7 +64,7 @@ void check_args_limits(char **args, int ac)
         temp = ft_atoi(args[i]);
         if (temp > 2147483647 || temp < -2147483648)
         {
-            free_args(NULL, args, 1);
+            free_args(NULL, args);
             print_error("Error\n");
         }
         i++;
